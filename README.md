@@ -1,29 +1,57 @@
-# README #
+# CME Research Messages
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This ROS package contains custom message definitions used in CME Research projects.
 
-### What is this repository for? ###
+## Package Overview
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+This package provides standardized message definitions that facilitate communication between different ROS nodes in CME Research projects. The messages are defined in the `msg` directory and are automatically generated into language-specific implementations during the build process.
 
-### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+# ROS Distro Support #
 
-### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
+|         |                                         melodic                                          |      noetic      |                                        rolling                                        |
+|:-------:|:----------------------------------------------------------------------------------------:|:----------------:|:-------------------------------------------------------------------------------------:|
+| Branch  | |                  | [`rolling_dev`](https://bitbucket.org/cme-robotics/cmeresearch_msgs/src/rolling_dev/) |
+| Status  |                                      not supported                                       |  not supported   |                                       supported                                       |
+| Version |                                     no yet released                                      | not yet released |                                   not yet released                                    |
 
-### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+
+
+## Getting Started
+
+### Prerequisites
+
+* ROS (Robot Operating System)
+* CMake
+* catkin build system
+
+### Installation
+
+1. Clone this repository into your catkin workspace's `src` directory:
+   ```bash
+   cd ~/catkin_ws/src
+   git clone <repository-url>
+   ```
+
+2. Build the package:
+   ```bash
+   cd ~/catkin_ws
+   catkin build cmeresearch_msgs
+   ```
+
+3. Source your workspace:
+   ```bash
+   source ~/catkin_ws/devel/setup.bash
+   ```
+
+## Usage
+
+To use these messages in your ROS nodes, add `cmeresearch_msgs` as a dependency in your package's `package.xml` and `CMakeLists.txt` files.
+
+## Contact
+
+For more information, please contact:
+- Email: info@cme-robotics.com
+- Website: https://cme-robotics.com
