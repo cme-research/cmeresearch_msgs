@@ -28,6 +28,7 @@ endif()
 rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/TinkerStepperFeedback.msg"
         "msg/TinkerStepperCommand.msg"
+        "msg/RobotState.msg"
         DEPENDENCIES std_msgs
 )
 
