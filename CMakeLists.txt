@@ -30,6 +30,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/TinkerStepperCommand.msg"
         "msg/RobotState.msg"
         "msg/SystemStats.msg"
+        "msg/NavStatus.msg"
         DEPENDENCIES std_msgs
 )
 

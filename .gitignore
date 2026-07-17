@@ -48,3 +48,8 @@ Thumbs.db
 *.mov
 *.wmv
 
+# ROS 2 / colcon build artifacts
+build/
+install/
+log/
+
