@@ -1,0 +1,12 @@
+# Golden RIHS01 type hashes of the generated interfaces.
+#
+# The hash covers field names and types (not comments). If test_interfaces.py
+# fails because a hash changed, the message's wire format changed: robot,
+# navigation and webapp images built from different SHAs will no longer talk
+# to each other. If the change is intended, update the hash here in the same
+# PR and roll out all consumers together.
+msg/NavStatus: RIHS01_f566bb0403cf59dcb469c324a9bcd7c58f3244a7e2a2791f7cd193eb3751fc81
+msg/RobotState: RIHS01_65aa4de50f45378d1e7901c377af16739619403f7306fa32ccf1c7efb85b952c
+msg/SystemStats: RIHS01_c14f75c08fb4745f10ee0a9f884fe975155c674d6a9ce4f813854c3173676f18
+msg/TinkerStepperCommand: RIHS01_dee958acf6995663207f2f8b9381a7247a76e8df78827e8dedd1d830f0241961
+msg/TinkerStepperFeedback: RIHS01_1504d5d49e6052c5d3ac2daca652c42c70e57b2e23b98d6a7483772e1a9c62fb
