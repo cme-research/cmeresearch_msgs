@@ -6,6 +6,6 @@ std_msgs/Header header
 # Wheel angular velocity in rad/s. The driver applies gear_ratio and
 # mirror_direction and converts it to microsteps/s.
 float32 velocity
-# Target position in steps. Reserved: currently ignored by the driver, which
-# only runs in continuous-drive (velocity) mode.
+# Unused (ignored by the driver). For position moves run the driver in
+# control_mode "position" and use the MoveSteps action.
 int32 position

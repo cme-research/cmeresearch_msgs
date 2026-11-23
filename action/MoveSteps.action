@@ -1,0 +1,25 @@
+# Move a stepper actuator by / to a number of microsteps.
+# Served by cmeresearch_stepper_driver in control_mode "position" (action name
+# `move_steps`). All positions and steps are microsteps on the motor shaft in the
+# actuator's direction convention (the driver applies mirror_direction).
+
+uint8 RELATIVE=0
+uint8 ABSOLUTE=1
+
+# RELATIVE: move by `steps` from the current position.
+# ABSOLUTE: move to position `steps`; requires a reference set via the driver's
+#           `zero_position` service since the bricklet was last (re)configured.
+uint8 mode
+int32 steps
+# Velocity limit for this move [microsteps/s]; 0 = the driver's max_step_vel.
+uint16 max_velocity
+---
+bool success
+# Position when the move ended [microsteps].
+int32 final_position
+# Why the move did not succeed (canceled, disconnected, emergency stop, ...).
+string message
+---
+int32 current_position     # microsteps
+int32 remaining_steps      # microsteps still to go
+float32 current_velocity   # signed microsteps/s

@@ -11,6 +11,7 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs)
+find_package(action_msgs REQUIRED)
 
 
 if(BUILD_TESTING)
@@ -35,7 +36,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/RobotState.msg"
         "msg/SystemStats.msg"
         "msg/NavStatus.msg"
-        DEPENDENCIES std_msgs
+        "action/MoveSteps.action"
+        DEPENDENCIES std_msgs action_msgs
 )
 
 ament_package()
