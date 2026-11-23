@@ -24,3 +24,11 @@ jobs:
           skip-tests: false
           rosdep-check: true
           package-name: cmeresearch_msgs
+          # Run real tests; ament linters (ctest label / pytest marker "linter") are excluded.
+          colcon-defaults: |
+            {
+              "test": {
+                "ctest-args": ["-LE", "linter"],
+                "pytest-args": ["-m", "not linter"]
+              }
+            }

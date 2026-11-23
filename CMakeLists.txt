@@ -23,6 +23,10 @@ if(BUILD_TESTING)
   # a copyright and license is added to all source files
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
+
+  # Interface guard: registration, serialization and wire-format (type hash) checks.
+  find_package(ament_cmake_pytest REQUIRED)
+  ament_add_pytest_test(test_interfaces test/test_interfaces.py TIMEOUT 60)
 endif()
 
 rosidl_generate_interfaces(${PROJECT_NAME}
